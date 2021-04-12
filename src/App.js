@@ -1,10 +1,13 @@
-import Slider from './components/slider/ImageSlider'
-import {sliderData} from './components/slider/SliderData'
+import ProductCard from "./components/ProductCard/ProductCard";
+import Icon from './Atoms/Icon/Icon'
 
 const App = () => {
-  return <div className="App">
-    <Slider slides={sliderData} />
-  </div>;
+  return (
+    <div className="App">
+      {/* <ProductCard /> */}
+      <Icon icon='arrow-left' iconSize='xl' />
+    </div>
+  );
 };
 
 export default App;
