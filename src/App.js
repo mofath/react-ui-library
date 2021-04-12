@@ -1,10 +1,11 @@
-import Slider from './components/slider/ImageSlider'
-import {sliderData} from './components/slider/SliderData'
+import ProductCard from "./components/ProductCard/ProductCard";
 
 const App = () => {
-  return <div className="App">
-    <Slider slides={sliderData} />
-  </div>;
+  return (
+    <div className="App">
+      <ProductCard />
+    </div>
+  );
 };
 
 export default App;
