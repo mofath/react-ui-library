@@ -1,0 +1,37 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+    <symbol id="cross" viewBox="0 0 24 24">
+        <title>cross</title>
+        <path d="M1.000,1.000 L9.000,9.000" fill="white" stroke="white" stroke-width="1.5" />
+        <path d="M9.000,1.000 L1.000,9.000" fill="white" stroke="white" stroke-width="1.5" />
+    </symbol>
+
+    <symbol id="star" viewBox="0 0 24 24">
+        <title>star</title>
+        <path d="M9.5 14.25l-5.584 2.936 1.066-6.218L.465 6.564l6.243-.907L9.5 0l2.792 5.657 6.243.907-4.517 4.404 1.066 6.218" />
+    </symbol>
+    
+    <symbol id="half-star" viewBox="0 0 24 24">
+        <title>half-star</title>
+        <path fill="#e9ba26" d="M9.5 14.25l-5.584 2.936 1.066-6.218L.465 6.564l6.243-.907L9.5 0l2.792"  />
+    </symbol>
+
+    <symbol id="filled-star" viewBox="0 0 24 24" >
+        <title>filled-star</title>
+        <use xlink:href="#star" fill="#e9ba26" />
+    </symbol>
+    
+    <symbol id="half-filled-star" viewBox="0 0 24 24">
+        <title>half-filled-star</title>
+        <use xlink:href="#star" fill="#9b9b9b"/>
+        <use xlink:href="#half-star" />
+    </symbol>
+
+    <symbol id="empty-star" viewBox="0 0 24 24" >
+        <title>empty-star</title>
+        <use xlink:href="#star" fill="#9b9b9b" />
+    </symbol>
+</defs>
+</svg>
+
+
