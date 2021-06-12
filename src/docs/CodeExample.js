@@ -1,28 +1,28 @@
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import hljs from 'highlight.js/lib/highlight'
-import javascript from 'highlight.js/lib/languages/javascript'
+import hljs from 'highlight.js/lib/core';  // require only the core library
+import javascript from 'highlight.js/lib/languages/javascript';
+import "./vs2015.css"
 
-const CodeExample = (props) => {
+hljs.registerLanguage('javascript', javascript);
 
-    const elementRef = useRef(null)
+const CodeExample = ({ code }) => {
+    const [highlightedCode, setHighlightedCode] = useState(code);
+
     useEffect(() => {
-        hljs.registerLanguage('javascript', javascript);
-        hljs.highlightBlock(elementRef);
-    }, [])
+        setHighlightedCode(hljs.highlightAuto(code).value)
+    }, [code]);
 
     return (
-        <pre ref={elementRef}>
-            <code>
-                {props.children}
-            </code>
+        <pre className="hljs" >
+            <code dangerouslySetInnerHTML={{ __html: highlightedCode }} />
         </pre>
     )
 }
 
 CodeExample.propTypes = {
-    children: PropTypes.string.isRequired
+    code: PropTypes.string.isRequired
 }
 
 export default CodeExample;
